@@ -4,4 +4,14 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+    livro.cpp \
+    impresso.cpp \
+    ebook.cpp \
+    audiobook.cpp
+
+HEADERS += \
+    livro.h \
+    impresso.h \
+    ebook.h \
+    audiobook.h
