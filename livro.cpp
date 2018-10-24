@@ -5,6 +5,11 @@ Livro::Livro()
 
 }
 
+Livro::~Livro()
+{
+
+}
+
 
 vector<string> Livro::getEscritores() const
 {
@@ -64,4 +69,11 @@ vector<string> Livro::getKeywords() const
 void Livro::setKeywords(const vector<string> &value)
 {
     keywords = value;
+}
+
+ostream &operator << (ostream &output, const Livro &livro)
+{
+    output << "\n" << livro.getTitulo() << "\n" << setw(30) << livro.getEscritores().at(0) << "\n" << livro.getIdioma() <<
+              "\n" << setw(3) << setfill('0') << livro.getCapitulos().size() << "\n" << livro.getKeywords().size() << endl;
+    return output;
 }
