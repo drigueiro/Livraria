@@ -1,0 +1,3 @@
+C:/Users/digoc/Desktop/18.2/POO/TP1/Livraria/cmake-build-debug/CMakeFiles/Livraria.dir
+C:/Users/digoc/Desktop/18.2/POO/TP1/Livraria/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/digoc/Desktop/18.2/POO/TP1/Livraria/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -5,12 +5,12 @@
 #include <string>
 #include <iomanip>
 #include <vector>
+#include <set>
 #include <algorithm>
 
 using namespace std;
 
-class Livro
-{
+class Livro {
     vector<string> escritores;
     string titulo;
     vector<string> capitulos;
@@ -23,18 +23,18 @@ public:
     vector<string> getEscritores() const;
     void setEscritores(const vector<string> &value);
     string getTitulo() const;
-    void setTitulo(const string &value);
+    void setTitulo(const string &titulo);
     vector<string> getCapitulos() const;
     void setCapitulos(const vector<string> &value);
     int getAno() const;
-    void setAno(int value);
+    void setAno(int ano);
     string getIdioma() const;
-    void setIdioma(const string &value);
+    void setIdioma(const string &idioma);
     vector<string> getKeywords() const;
     void setKeywords(const vector<string> &value);
 
     friend ostream &operator << (ostream&, const Livro&);
-
-    vector<Livro> idiomas(string idioma);
+    set<string> retornaKeywords(string keywords, vector<Livro*> vetor);
+    vector<Livro*> retornaLivrosCapitulos(int numCap, vector<Livro*> vetor);
 };
-#endif // LIVRO_H
+#endif

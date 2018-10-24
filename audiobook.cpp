@@ -1,34 +1,30 @@
 #include "audiobook.h"
 
-Audiobook::Audiobook()
-{
-
-}
+Audiobook::Audiobook() {}
 
 Audiobook::~Audiobook(){}
 
-float Audiobook::getDuracao() const
-{
-    return duracao;
+float Audiobook::getDuracao() const { return this->duracao; }
+
+void Audiobook::setDuracao(float duracao){
+    this->duracao = duracao;
 }
 
-void Audiobook::setDuracao(float value)
-{
-    duracao = value;
+string Audiobook::getFormatoaudio() const { return this->formatoaudio; }
+
+void Audiobook::setFormatoaudio(const string &formato){
+    formatoaudio = formato;
 }
 
-string Audiobook::getFormatoaudio() const
+ostream &operator << (ostream &output, const Audiobook &livro)
 {
-    return formatoaudio;
+    output << "\n" << livro.getTitulo() << "\n" << setw(30) << livro.getEscritores().at(0) << "\n" << livro.getIdioma() <<
+              "\n" << setw(3) << setfill('0') << livro.getCapitulos().size() << "\n" << livro.getKeywords().size() << "\n" <<
+              setprecision(2) << fixed << livro.getDuracao() << endl;
+    return output;
 }
 
-void Audiobook::setFormatoaudio(const string &value)
-{
-    formatoaudio = value;
-}
-
-bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor)
-{
+bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor){//letra e
     Audiobook* verif;
     for(auto elem:livros){//percorre vetor de livros para achar os audiobooks
         verif = dynamic_cast<Audiobook*>(elem);// verifica audiobook
@@ -42,14 +38,5 @@ bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor)
     }
     return false;
 }
-
-ostream &operator << (ostream &output, const Audiobook &livro)
-{
-    output << "\n" << livro.getTitulo() << "\n" << setw(30) << livro.getEscritores().at(0) << "\n" << livro.getIdioma() <<
-              "\n" << setw(3) << setfill('0') << livro.getCapitulos().size() << "\n" << livro.getKeywords().size() << "\n" <<
-              setprecision(2) << fixed << livro.getDuracao() << endl;
-    return output;
-}
-
 
 
