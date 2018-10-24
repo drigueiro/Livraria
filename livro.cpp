@@ -1,73 +1,45 @@
 #include "livro.h"
 
-Livro::Livro()
-{
+Livro::Livro() {}
 
-}
-
-Livro::~Livro()
-{
-
-}
+Livro::~Livro() {}
 
 
-vector<string> Livro::getEscritores() const
-{
-    return escritores;
-}
+vector<string> Livro::getEscritores() const { return this->escritores; }
 
-void Livro::setEscritores(const vector<string> &value)
-{
+void Livro::setEscritores(const vector<string> &value) {
     escritores = value;
 }
 
-string Livro::getTitulo() const
-{
-    return titulo;
+string Livro::getTitulo() const { return this->titulo; }
+
+void Livro::setTitulo(const string &titulo){
+    this->titulo = titulo;
 }
 
-void Livro::setTitulo(const string &value)
-{
-    titulo = value;
+vector<string> Livro::getCapitulos() const {
+    return this->capitulos;
 }
 
-vector<string> Livro::getCapitulos() const
-{
-    return capitulos;
-}
-
-void Livro::setCapitulos(const vector<string> &value)
-{
+void Livro::setCapitulos(const vector<string> &value){
     capitulos = value;
 }
 
-int Livro::getAno() const
-{
-    return ano;
+int Livro::getAno() const { return this->ano; }
+
+void Livro::setAno(int ano) {
+    this->ano = ano;
 }
 
-void Livro::setAno(int value)
-{
-    ano = value;
+string Livro::getIdioma() const{ return this->idioma; }
+
+void Livro::setIdioma(const string &idioma) {
+    this->idioma = idioma;
 }
 
-string Livro::getIdioma() const
-{
-    return idioma;
-}
+vector<string> Livro::getKeywords() const { return keywords; }
 
-void Livro::setIdioma(const string &value)
-{
-    idioma = value;
-}
-
-vector<string> Livro::getKeywords() const
-{
-    return keywords;
-}
-
-void Livro::setKeywords(const vector<string> &value)
-{
+void Livro::setKeywords(const vector<string> &value) {
     keywords = value;
 }
 
