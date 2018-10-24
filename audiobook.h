@@ -3,18 +3,19 @@
 
 #include "livro.h"
 
-class Audiobook : public Livro{
+class Audiobook : public Livro
+{
     float duracao;
     string formatoaudio;
 public:
     Audiobook();
     virtual ~Audiobook();
     float getDuracao() const;
-    void setDuracao(float duracao);
+    void setDuracao(float value);
     string getFormatoaudio() const;
-    void setFormatoaudio(const string &formato);
+    void setFormatoaudio(const string &value);
 
     bool autorAudiobook(vector<Livro*> livros, string escritor);
 };
 
-#endif
+#endif // AUDIOBOOK_H
