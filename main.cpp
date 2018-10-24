@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<Livro*> retornaLivrosIdioma(string idioma, vector<Livro*> vetor)//letra b: retorna coleção de livros com o mesmo idioma
+vector<Livro*> retornaLivros(string idioma, vector<Livro*> vetor)//letra b: retorna coleção de livros com o mesmo idioma
 {
     vector<Livro*> auxiliar;//vector a ser retornado
     for (auto elem : vetor){
@@ -15,14 +15,7 @@ vector<Livro*> retornaLivrosIdioma(string idioma, vector<Livro*> vetor)//letra b
     return auxiliar;
 }
 
-vector<Livro*> retornaLivrosTitulo(string titulo, vector<Livro*> vetor)//letra f: retorna coleção de livros com o mesmo titulo
-{
-    vector<Livro*> auxiliar;//vector a ser retornado
-    for (auto elem : vetor){
-        if(elem->getTitulo() == titulo) auxiliar.push_back(elem);
-    }
-    return auxiliar;
-}
+
 
 void imprimeTipo(int escolha, vector<Livro *> vetor) {
     Ebook *eb;

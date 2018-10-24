@@ -3,20 +3,21 @@
 
 #include "livro.h"
 
-class Ebook : public Livro {
+class Ebook : public Livro
+{
     string url;
     string formato;
 public:
     Ebook();
     virtual ~Ebook();
     string getUrl() const;
-    void setUrl(const string &url);
+    void setUrl(const string &value);
     string getFormato() const;
-    void setFormato(const string &formato);
+    void setFormato(const string &value);
 
     friend ostream &operator << (ostream &output, const Ebook &livro);
-    vector<Livro*> eletronicosOrdenados(string formato, vector<Livro*> vetor);
 
+    vector<Livro*> eletronicosOrdenados(string formato, vector<Livro*> vetor);
 };
 
-#endif
+#endif // EBOOK_H
