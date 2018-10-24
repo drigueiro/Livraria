@@ -17,6 +17,31 @@ vector<Livro*> retornaLivros(string idioma, vector<Livro*> vetor)//letra b: reto
 
 
 
+void imprimeTipo(int escolha, vector<Livro *> vetor) {
+    Ebook *eb;
+    Impresso *imp;
+    Audiobook *aud;
+    for(auto elem : vetor){
+        eb = dynamic_cast<Ebook*>(elem);
+        imp = dynamic_cast<Impresso*>(elem);
+        aud = dynamic_cast<Audiobook*>(elem);
+        if(eb != nullptr) {
+            if (escolha == 1)cout << eb;
+            if (escolha == 2) //escreve no txt
+        }
+        else if(imp != nullptr) {
+            if (escolha == 1)cout << imp;
+            if (escolha == 2) //escreve no txt
+        }
+        else if(aud != nullptr) {
+            if (escolha == 1)cout << aud;
+            if (escolha == 2) //escreve no txt
+        }
+    }
+
+}
+
+
 int main()
 {
 //    vector<Livro*> livros;
