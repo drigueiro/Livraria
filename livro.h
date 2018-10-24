@@ -5,6 +5,7 @@
 #include <string>
 #include <iomanip>
 #include <vector>
+#include <set>
 #include <algorithm>
 
 using namespace std;
@@ -33,7 +34,7 @@ public:
     void setKeywords(const vector<string> &value);
 
     friend ostream &operator << (ostream&, const Livro&);
-
-    vector<Livro> idiomas(string idioma);
+    set<string> retornaKeywords(string keywords, vector<Livro*> vetor);
+    vector<Livro*> retornaLivrosCapitulos(int numCap, vector<Livro*> vetor);
 };
 #endif

@@ -15,8 +15,8 @@ public:
     void setFormato(const string &formato);
 
     friend ostream &operator << (ostream &output, const Ebook &livro);
-
     vector<Livro*> eletronicosOrdenados(string formato, vector<Livro*> vetor);
+
 };
 
 #endif

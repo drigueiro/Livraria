@@ -15,7 +15,6 @@ public:
     void setColunas(int colunas);
 
     friend ostream &operator << (ostream&, const Impresso&);
-    vector<Livro*> eletronicosOrdenados(string formato, vector<Livro*> vetor);
 };
 
 #endif

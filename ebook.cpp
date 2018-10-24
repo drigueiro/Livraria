@@ -23,7 +23,7 @@ ostream &operator << (ostream &output, const Ebook &livro){
     return output;
 }
 
-vector<Livro*> eletronicosOrdenados(string formato, vector<Livro*> vetor){ //letra c: como ordenar em função do ano, sobrecarga de sort()
+vector<Livro*> Ebook :: eletronicosOrdenados(string formato, vector<Livro*> vetor){ //letra c: como ordenar em função do ano, sobrecarga de sort()
     vector<Livro*> aux;//vetor para alocar livros do tipo eletronico
     Ebook* coisa;//ponteiro para dynamic cast
     for(auto elem : vetor){

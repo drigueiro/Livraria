@@ -24,7 +24,7 @@ ostream &operator << (ostream &output, const Audiobook &livro)
     return output;
 }
 
-bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor){
+bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor){//letra e
     Audiobook* verif;
     for(auto elem:livros){//percorre vetor de livros para achar os audiobooks
         verif = dynamic_cast<Audiobook*>(elem);// verifica audiobook
