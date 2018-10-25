@@ -19,7 +19,7 @@ vector<Livro*> retornaLivros(string idioma, vector<Livro*> vetor)//letra b: reto
 
 
 
-void imprimeTipo(int escolha, vector<Livro *> vetor) {
+void imprimeTipo(int escolha, vector<Livro *> vetor) { // Letra J
     Ebook *eb;
     Impresso *imp;
     Audiobook *aud;
@@ -55,7 +55,7 @@ vector<Livro*>::iterator retornaTipos(string nome, vector<Livro*> vetor)
     return itr;
 }
 
-multimap<string, string> detalhesIdiomas(vector<Livro*> livros)
+multimap<string, string> detalhesIdiomas(vector<Livro*> livros) // Letra L
 {
     typedef multimap<string, string> Mapeador;
     Mapeador mapeador;
@@ -99,12 +99,12 @@ int main(int argc, char *argv[])
     }
 
     // implementação letra c
-    Ebook eletr;
-    cin >> var;
-    vector<Livro*> ebooks = eletr.eletronicosOrdenados(var, livros);
-    for(auto elem : ebooks){
-        cout << elem;
-    }
+//    Ebook eletr;
+//    cin >> var;
+//    vector<Livro*> ebooks = eletr.eletronicosOrdenados(var, livros);
+//    for(auto elem : ebooks){
+//        cout << elem;
+//    }
 
     // implementação letra d
     Impresso imp;
@@ -122,6 +122,15 @@ int main(int argc, char *argv[])
     bool temEscritor = audio.autorAudiobook(livros, var);
     if(temEscritor) cout << "\n Há Audiobooks feitos pelo escritor " << var << endl;
     else cout << "\n Não há Audiobooks feitos por este escritor..." << endl;
+
+    // implementação letra g
+    Livro lv;
+    cin >> var;
+    set<string> chaves = lv.retornaKeywords(var, livros);
+    for(auto elem : chaves){
+        cout << elem << " ";
+    }
+    cout << endl;
 
     for(int i = 0; i < tamlivros; i++){
         arquivos[i].close();
