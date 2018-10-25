@@ -16,7 +16,9 @@ public:
     void setColunas(int value);
 
     friend ostream &operator << (ostream&, const Impresso&);
-    vector<Livro*> eletronicosOrdenados(string formato, vector<Livro*> vetor);
+
+    vector<Livro*> maiorQtdLivrarias(vector<Livro*>, int);
+    Impresso livroEmMaisLivrarias(vector<Livro*>);
 };
 
 #endif // IMPRESSO_H

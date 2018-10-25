@@ -93,7 +93,7 @@ set<string> Livro :: retornaKeywords(string keywords, vector<Livro*> vetor){ //l
 vector<Livro*> Livro::retornaLivrosCapitulos(int numCap, vector<Livro *> vetor) {//letra h, retornar container de elementos com o numero de capitulos menor ou igual ao passado pelo parametro
     vector<Livro*> aux;
     for(auto elem : vetor){
-        if(elem->getCapitulos().size() <= numCap){
+        if(int(elem->getCapitulos().size()) <= numCap){
             aux.push_back(elem);
         }
     }
