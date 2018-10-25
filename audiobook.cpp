@@ -27,7 +27,7 @@ void Audiobook::setFormatoaudio(const string &value)
     formatoaudio = value;
 }
 
-bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor)
+bool Audiobook::autorAudiobook(vector<Livro *> livros, string escritor) // Letra E
 {
     Audiobook* verif;
     for(auto elem:livros){//percorre vetor de livros para achar os audiobooks

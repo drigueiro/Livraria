@@ -45,7 +45,28 @@ void imprimeTipo(int escolha, vector<Livro *> vetor) { // Letra J
     saida.close();
 }
 
-vector<Livro*>::iterator retornaTipos(string nome, vector<Livro*> vetor)
+int numKeyword(string key, vector<Livro*> vetor){//letra k, total de livros com a keyword passado por parametro
+    int total = 0;
+    for(auto elem : vetor){
+        for(auto elem2 : elem->getKeywords()){
+            if(elem2 == key){
+                total++;
+            }
+        }
+    }
+    return total;
+}
+
+vector<Livro*> retornaLivrosTitulo(string titulo, vector<Livro*> vetor)//letra f: retorna coleção de livros com o mesmo titulo
+{
+    vector<Livro*> auxiliar;//vector a ser retornado
+    for (auto elem : vetor){
+        if(elem->getTitulo() == titulo) auxiliar.push_back(elem);
+    }
+    return auxiliar;
+}
+
+vector<Livro*>::iterator retornaTipos(string nome, vector<Livro*> vetor) // Letra I
 {
     vector<Livro*>::iterator itr;
     for(itr = vetor.begin(); itr != vetor.end(); itr++){
